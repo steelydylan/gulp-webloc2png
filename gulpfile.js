@@ -1,5 +1,6 @@
 var gulp = require('gulp'); 
 var webloc2png = require('gulp-webloc2png');
+var watch = require('gulp-watch');
 gulp.task("webloc2png",function(){
 	gulp.src(['urls/*.webloc'])
 		.pipe(webloc2png({
@@ -9,5 +10,7 @@ gulp.task("webloc2png",function(){
 		}))
 });
 gulp.task("default",function(){
-	gulp.watch("urls/*.webloc",["webloc2png"]);
+	watch("urls/*.webloc",function(){
+		gulp.start("webloc2png");
+	});
 });
