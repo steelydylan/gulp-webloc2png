@@ -1,4 +1,4 @@
-gulp-less-to-scss
+gulp-webloc2png
 =======
 A gulp plugin convert html pages to png files
 
