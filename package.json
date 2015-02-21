@@ -1,0 +1,6 @@
+{
+	"dependency":{
+		"gulp-webloc2png":"*",
+		"gulp-watch":"*"
+	}
+}

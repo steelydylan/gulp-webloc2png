@@ -4,9 +4,12 @@ var watch = require('gulp-watch');
 gulp.task("webloc2png",function(){
 	gulp.src(['urls/*.webloc'])
 		.pipe(webloc2png({
-			width:780,
-			height:500,
-			dest:"screenShot"
+			browserWidth:1280,
+			browserHeight:720,
+			clipWidth:1280,
+			clipHeight:720,
+			scale:1,
+			dir:"screenShot"
 		}))
 });
 gulp.task("default",function(){
